@@ -4,7 +4,7 @@
 ### Prime numbers:
 
 assembler output:
-```
+```asm
 	.file	"main.cpp"
 	.text
 	.local	_ZStL8__ioinit
