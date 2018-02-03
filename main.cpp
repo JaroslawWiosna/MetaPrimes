@@ -21,5 +21,18 @@ int main() {
     }
     std::cout << std::endl;
 
+    constexpr auto p1 = Primes<1>();
+    for (auto x : p1.array) {
+        std::cout << x << ", ";
+    }
+    std::cout << std::endl;
+    constexpr auto p2 = Primes<2>();
+    for (auto x : p2.array) {
+        std::cout << x << ", ";
+    }
+    std::cout << std::endl;
+
+
+
     return 0;
 }

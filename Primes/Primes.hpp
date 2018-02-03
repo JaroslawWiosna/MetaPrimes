@@ -25,4 +25,19 @@ struct Primes {
     std::array<unsigned, N> array;
 };
 
+template<>
+struct Primes<1> {
+    constexpr Primes() : array() {
+        array[0] = 2;
+    }
+    std::array<unsigned, 1> array;
+};
+
+template<>
+struct Primes<0> {
+    constexpr Primes() : array() {
+    }
+    std::array<unsigned, 0> array;
+};
+
 
