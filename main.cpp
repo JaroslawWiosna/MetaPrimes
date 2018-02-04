@@ -5,7 +5,7 @@
 int main() {
 
     constexpr unsigned number_of_primes{150};
-    constexpr unsigned number_of_antiprimes{15};
+    constexpr unsigned number_of_antiprimes{19};
 
     std::cout << "Prime numbers: " << std::endl;
     constexpr auto p = Primes<number_of_primes>();
@@ -20,19 +20,6 @@ int main() {
         std::cout << x << ", ";
     }
     std::cout << std::endl;
-
-    constexpr auto p1 = Primes<1>();
-    for (auto x : p1.array) {
-        std::cout << x << ", ";
-    }
-    std::cout << std::endl;
-    constexpr auto p2 = Primes<2>();
-    for (auto x : p2.array) {
-        std::cout << x << ", ";
-    }
-    std::cout << std::endl;
-
-
 
     return 0;
 }

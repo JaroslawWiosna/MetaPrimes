@@ -1,13 +1,26 @@
 #include <array>
+#include "Primes.hpp"
 
 constexpr unsigned how_many_factors(unsigned number) {
-    unsigned cnt{};
-    for (unsigned i{1} ; i<=number ; ++i) {
-        if (number % i == 0) {
-            ++cnt;
+    unsigned a{number};
+    unsigned result{1};
+    unsigned tmp{1};
+    constexpr auto primes = Primes<400>();
+    unsigned i{};
+    while (1) {
+        if (a == primes.array[i]) {
+            tmp += 1;
+	    result *= tmp;
+	    return result;
+        } else if ( a % primes.array[i] == 0) {
+            tmp += 1;
+            a /= primes.array[i];
+        } else {
+            ++i;
+            result *= tmp;
+            tmp = 1;
         }
     }
-    return cnt;
 }
 
 template<long N>

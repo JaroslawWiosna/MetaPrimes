@@ -1,5 +1,5 @@
 #include <array>
-
+#pragma once
 constexpr bool is_prime(unsigned n) {
     for(long i{2}; i <= n/2 ; ++i) {
         if (n % i == 0)
